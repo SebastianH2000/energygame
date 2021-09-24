@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="javascripts/break_infinity.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="javascripts/player.js"></script>
+    <script type="text/javascript" src="javascripts/scaleWindow.js"></script>
+    <script type="text/javascript" src="javascripts/loop.js"></script>
+    <script type="text/javascript" src="javascripts/tabsAndThemes.js"></script>
+    <script type="text/javascript" src="javascripts/format.js"></script>
+    <script type="text/javascript" src="javascripts/energy.js"></script>
+</head>
+<body>
+    <div id="gameWindow">
+
+        <div id="tabContainer" class="containerRow">
+            <div onclick="switchTab('energy')" id="energyTab" class="tabBtn">Energy</div>
+            <div onclick="switchTab('options')" id="optionsTab" class="tabBtn">Options</div>
+        </div>
+
+        <div id="SubTabContainer">
+            <div id="energySubTabContainer" class="containerRow">
+                <div id="energyGeneratorsSubTab" class="tabBtn subTabBtn">Generators</div>
+            </div>
+    
+            <div id="optionsSubTabContainer" class="containerRow">
+                <div id="optionsSettingsSubTab" class="tabBtn subTabBtn">Settings</div>
+            </div>
+        </div>
+
+
+
+        <div id="energyContainer">
+            <div id="energyGeneratorsContainer" class="container">
+                <div id="energyDisplay" class="infoBoxTwo"></div>
+                <div onclick="gainEnergy(1)" id="energyGeneratorManualDisplay" class="menuBtn infoBoxThree">Turn The Crank - Generate 1 Energy</div>
+            </div>
+        </div>
+
+        <div id="optionsContainer">
+            <div id="optionsSettingsContainer" class="container">
+                <div class="containerRow">
+                    <div onclick="themeChange(1)" id="themeBtn" class="menuBtn">Current Theme: Default</div>
+                    <div id="themeExample" class="container">
+                      <div class="themeExampleContainer containerRow"><div id="themeExample0">0</div><div id="themeExample1">1</div><div id="themeExample2">2</div><div id="themeExample3">3</div><div id="themeExample4">4</div></div><div class="themeExampleContainer containerRow"><div id="themeExample5">5</div><div id="themeExample6">6</div><div id="themeExample7">7</div><div id="themeExample8">8</div><div id="themeExample9">9</div></div>
+                    </div>
+                </div>
+                <div class="containerRow">
+                    <div onclick="save()" class="menuBtn">Save</div>
+                    <div onclick="loadData()" class="menuBtn">Load</div>
+                    <div onclick="resetSave()" class="menuBtn">Reset Save</div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
