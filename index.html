@@ -18,12 +18,26 @@
     <script type="text/javascript" src="javascripts/tabsAndThemes.js"></script>
     <script type="text/javascript" src="javascripts/format.js"></script>
     <script type="text/javascript" src="javascripts/energy.js"></script>
+    <script type="text/javascript" src="javascripts/expansion.js"></script>
 </head>
 <body>
     <div id="gameWindow">
 
+        <div id="prestigeContainer" class="container">
+            <!--<div class="containerRow">
+                <div onmouseover="prestigeViewChange('expansion')" class="menuBtnTn">Expansion</div>
+            </div>-->
+            <div id="expansionsDisplayHeader">Expansions: poo</div>
+            <div onclick="gainExpansions()" id="expansionPrestigeView" class="width175 container menuBtnTn">
+                <div class="infoBoxThree">Expand</div>
+                <div id="gainExpansionsDisplay" class="infoBoxFive">Gain 0 Expansions</div>
+                <div id="expansionCostDisplay" class="infoBoxFive">Next at 10 energy</div>
+            </div>
+        </div>
+
         <div id="tabContainer" class="containerRow">
             <div onclick="switchTab('energy')" id="energyTab" class="tabBtn">Energy</div>
+            <div onclick="switchTab('expansion')" id="expansionTab" class="tabBtn">Expansion</div>
             <div onclick="switchTab('options')" id="optionsTab" class="tabBtn">Options</div>
         </div>
 
@@ -32,6 +46,10 @@
                 <div id="energyGeneratorsSubTab" class="tabBtn subTabBtn">Generators</div>
             </div>
     
+            <div id="expansionSubTabContainer" class="containerRow">
+                <div id="expansionMilestonesSubTab" class="tabBtn subTabBtn">Milestones</div>
+            </div>
+
             <div id="optionsSubTabContainer" class="containerRow">
                 <div id="optionsSettingsSubTab" class="tabBtn subTabBtn">Settings</div>
             </div>
@@ -43,6 +61,12 @@
             <div id="energyGeneratorsContainer" class="container">
                 <div id="energyDisplay" class="infoBoxTwo"></div>
                 <div onclick="gainEnergy(1)" id="energyGeneratorManualDisplay" class="menuBtn infoBoxThree">Turn The Crank - Generate 1 Energy</div>
+            </div>
+        </div>
+
+        <div id="expansionContainer">
+            <div id="expansionMilestonesContainer" class="container">
+
             </div>
         </div>
 
@@ -58,7 +82,8 @@
                     <div onclick="save()" class="menuBtn">Save</div>
                     <div onclick="loadData()" class="menuBtn">Load</div>
                     <div onclick="resetSave()" class="menuBtn">Reset Save</div>
-                  </div>
+                </div>
+                <div onclick="toggleAutoSave()" id="autoSaveBtn" class="menuBtn">Auto Save (Saves Once Every Second): ON</div>
             </div>
         </div>
 
