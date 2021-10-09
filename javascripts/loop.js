@@ -16,7 +16,6 @@ function mainLoop() {
 }
 
 function mainGameLoop() {
-
 };
 
 function updateDisplay() {
@@ -24,6 +23,15 @@ function updateDisplay() {
     //player.energy = new Decimal("1e1000");
     //document.getElementById("energyDisplay").textContent = "Energy: " + player.energy.toStringWithDecimalPlaces(2);
     document.getElementById("energyDisplay").textContent = "Energy: " + format(player.energy,2,2);
+    if (player.energy.exponent > player.expansions) {
+        document.getElementById("expansionPrestigeView").classList.remove("Off");
+    }
+    else {
+        document.getElementById("expansionPrestigeView").classList.add("Off");
+    }
+    document.getElementById("expansionsDisplayHeader").textContent = "Expansions: " + format(player.expansions,2,2);
+    document.getElementById("gainExpansionsDisplay").textContent = "Gain " + format(Math.max(player.energy.exponent - player.expansions,0),0,2) + " Expansions";
+    document.getElementById("expansionCostDisplay").textContent = "Next At " + format(player.expansionCostMult.pow(player.expansions.add(1))) + " Energy";
 
     scaleWindow();
 }
@@ -33,5 +41,7 @@ function updateText(p1,p2) {
 }
 
 function slowLoop() {
-    //save();
+    if (player.autoSave === true) {
+        save();
+    }
 }
