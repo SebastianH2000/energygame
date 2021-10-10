@@ -61,12 +61,25 @@
             <div id="energyGeneratorsContainer" class="container">
                 <div id="energyDisplay" class="infoBoxTwo"></div>
                 <div onclick="gainEnergy(1)" id="energyGeneratorManualDisplay" class="menuBtn infoBoxThree">Turn The Crank - Generate 1 Energy</div>
+                <div onclick="buyBuilding('energy','Generator',10)" id="energyGeneratorContainer" class="menuBtnSm container">
+                    <div id="energyGeneratorDisplay" class="infoBoxThree">Energy Generators: 0</div>
+                    <div id="energyGeneratorCostDisplay" class="infoBoxFour vertMargin2px">Costs: 10 Energy</div>
+                    <div id="energyGeneratorProductionDisplay" class="infoBoxFour vertMargin2px">Current: 0 EpS</div>
+                    <div id="energyGeneratorNextDisplay" class="infoBoxFour vertMargin2px">Next: 1 EpS</div>
+                </div>
             </div>
         </div>
 
         <div id="expansionContainer">
             <div id="expansionMilestonesContainer" class="container">
-
+                <div id="expansionsDisplayMilestones" class="infoBoxTwo"></div>
+                <div id="expansionsTotalDisplayMilestones" class="infoBoxTwo"></div>
+                <div id="expansionsHighestDisplayMilestones" class="infoBoxTwo"></div>
+                <div id="expansionMilestoneOne" class="menuBtnSm container">
+                    <div class="infoBoxFour">Expansion Milestone One</div>
+                    <div class="infoBoxFour">Requires 1 Expansion</div>
+                    <div class="infoBoxFour">Effect: Unlocks An Energy Generator</div>
+                </div>
             </div>
         </div>
 
