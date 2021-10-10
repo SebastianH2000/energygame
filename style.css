@@ -153,9 +153,8 @@ html, body {
     font-weight: 400;
 }
 
-.infoBoxFive {
-  font-size: 12px;
-  font-weight: 400;
+.vertMargin2px {
+    margin: 2px 0px 0px 0px;
 }
 
 .width175 {
@@ -195,6 +194,14 @@ html, body {
 
 #prestigeContainer {
     margin: 10px 0px 0px 0px;
+}
+
+.Off {
+    background-color: var(--primary-2);
+}
+
+.Off:hover {
+    cursor: default;
 }
 
 :root {
